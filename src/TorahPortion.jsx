@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Header } from "semantic-ui-react";
 
-const today = new Date("2018-10-31 13:00");
+const today = new Date();
 const nextShabbat = new Date(today);
 nextShabbat.setDate(today.getDate() + (6 + 7 - today.getDay()) % 7);
 console.log(nextShabbat);
