@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/whatisthisweekstorahportion/static/media/icons.faff9214.woff"
   },
   {
-    "revision": "34389b780c36bd2900f8",
-    "url": "/whatisthisweekstorahportion/static/css/main.d8de0ca1.chunk.css"
+    "revision": "3fd4c0614f594803594b",
+    "url": "/whatisthisweekstorahportion/static/css/main.d6148b54.chunk.css"
   },
   {
     "revision": "a1a749e89f578a49306ec2b055c073da",
     "url": "/whatisthisweekstorahportion/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "c0e8eb4ec264f11ae9f3",
-    "url": "/whatisthisweekstorahportion/static/js/1.c0e8eb4e.chunk.js"
+    "revision": "9d6a67fee693ae7a59d6",
+    "url": "/whatisthisweekstorahportion/static/js/1.9d6a67fe.chunk.js"
   },
   {
     "revision": "47368fbb3dea5ee02d29",
@@ -28,24 +28,24 @@ self.__precacheManifest = [
     "url": "/whatisthisweekstorahportion/static/media/outline-icons.ef60a4f6.woff"
   },
   {
-    "revision": "701ae6abd4719e9c2ada3535a497b341",
-    "url": "/whatisthisweekstorahportion/static/media/outline-icons.701ae6ab.eot"
+    "revision": "9c74e172f87984c48ddf5c8108cabe67",
+    "url": "/whatisthisweekstorahportion/static/media/flags.9c74e172.png"
   },
   {
     "revision": "ad97afd3337e8cda302d10ff5a4026b8",
     "url": "/whatisthisweekstorahportion/static/media/outline-icons.ad97afd3.ttf"
   },
   {
-    "revision": "9c74e172f87984c48ddf5c8108cabe67",
-    "url": "/whatisthisweekstorahportion/static/media/flags.9c74e172.png"
+    "revision": "701ae6abd4719e9c2ada3535a497b341",
+    "url": "/whatisthisweekstorahportion/static/media/outline-icons.701ae6ab.eot"
   },
   {
     "revision": "0ab54153eeeca0ce03978cc463b257f7",
     "url": "/whatisthisweekstorahportion/static/media/icons.0ab54153.woff2"
   },
   {
-    "revision": "34389b780c36bd2900f8",
-    "url": "/whatisthisweekstorahportion/static/js/main.34389b78.chunk.js"
+    "revision": "3fd4c0614f594803594b",
+    "url": "/whatisthisweekstorahportion/static/js/main.3fd4c061.chunk.js"
   },
   {
     "revision": "e8c322de9658cbeb8a774b6624167c2c",
@@ -64,12 +64,12 @@ self.__precacheManifest = [
     "url": "/whatisthisweekstorahportion/static/media/icons.b87b9ba5.ttf"
   },
   {
-    "revision": "13db00b7a34fee4d819ab7f9838cc428",
-    "url": "/whatisthisweekstorahportion/static/media/brand-icons.13db00b7.eot"
-  },
-  {
     "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
     "url": "/whatisthisweekstorahportion/static/media/brand-icons.c5ebe0b3.ttf"
+  },
+  {
+    "revision": "13db00b7a34fee4d819ab7f9838cc428",
+    "url": "/whatisthisweekstorahportion/static/media/brand-icons.13db00b7.eot"
   },
   {
     "revision": "82f60bd0b94a1ed68b1e6e309ce2e8c3",
@@ -80,11 +80,11 @@ self.__precacheManifest = [
     "url": "/whatisthisweekstorahportion/static/media/icons.962a1bf3.svg"
   },
   {
-    "revision": "c0e8eb4ec264f11ae9f3",
-    "url": "/whatisthisweekstorahportion/static/css/1.9dd5c75d.chunk.css"
+    "revision": "9d6a67fee693ae7a59d6",
+    "url": "/whatisthisweekstorahportion/static/css/1.22b0872e.chunk.css"
   },
   {
-    "revision": "161bec9368a2b05a3d2f3e4a8880372e",
+    "revision": "e3d7ae3959d5b4c2c5f7bbb9390821e5",
     "url": "/whatisthisweekstorahportion/index.html"
   }
 ];

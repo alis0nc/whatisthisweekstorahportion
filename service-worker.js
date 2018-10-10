@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/whatisthisweekstorahportion/precache-manifest.cafc1ec52f301585722f84e9a74ab8da.js"
+  "/whatisthisweekstorahportion/precache-manifest.a8f02b1dd26af9c64792bdbe36331d03.js"
 );
 
 workbox.clientsClaim();
