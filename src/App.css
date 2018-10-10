@@ -30,3 +30,11 @@
     transform: rotate(360deg);
   }
 }
+
+.footer {
+  padding-top: 50px;
+}
+
+.content {
+  padding-top: 100px;
+}
