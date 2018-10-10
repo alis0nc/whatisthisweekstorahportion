@@ -6,6 +6,7 @@ class Footer extends Component {
     return (
       <Container className="footer">
         An <a href="https://alisonc.net/">Alison Chan</a> production.
+        Uses the <a href="https://hebcal.com/">Hebcal</a> API.
       </Container>
     );
   }
