@@ -104,7 +104,7 @@ class ReadButtons extends Component {
       endVerse
     } = this.props;
     return (
-      <div>
+      <Button.Group vertical>
         <Button
           as="a"
           href={generateSefariaURL(
@@ -129,7 +129,7 @@ class ReadButtons extends Component {
           target="_blank"
           content="Read on ORT"
         />
-      </div>
+      </Button.Group>
     );
   }
 }

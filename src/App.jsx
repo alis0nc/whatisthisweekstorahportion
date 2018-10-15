@@ -1,20 +1,29 @@
 import React, { Component } from "react";
 import { Container } from "semantic-ui-react";
+import startOfWeek from "date-fns/start_of_week";
+import addDays from "date-fns/add_days";
+import format from "date-fns/format";
+import parse from "date-fns/parse";
+import isAfter from "date-fns/is_after";
+import compareAsc from "date-fns/compare_asc";
 import TorahPortion from "./TorahPortion";
 import ReadButtons from "./ReadButtons";
 import Footer from "./Footer";
 import "./App.css";
 
 const today = new Date();
-const nextShabbat = new Date(today);
-nextShabbat.setDate(today.getDate() + ((6 + 7 - today.getDay()) % 7));
-const url = `https://www.hebcal.com/hebcal/?v=1&cfg=json&s=on&year=${nextShabbat.getFullYear()}&month=${nextShabbat.getMonth() +
-  1}&ss=on&geo=none`;
+// 5 days from the monday before today, is always this coming shabbat.
+// this
+const nextShabbat = addDays(startOfWeek(today, { weekStartsOn: 1 }), 5);
+const url = `https://www.hebcal.com/hebcal/?v=1&cfg=json&s=on&year=${format(
+  nextShabbat,
+  "YYYY"
+)}&month=${format(nextShabbat, "M")}&ss=on&geo=none`;
 
 const parshaFilter = apiResponse => {
   const nextParsha = apiResponse.items
-    .filter(item => new Date(item.date) >= today)
-    .sort((a, b) => new Date(a.date) - new Date(b.date))[0];
+    .filter(item => isAfter(parse(item.date), today))
+    .sort((a, b) => compareAsc(parse(a.date), parse(b.date)))[0];
   return nextParsha;
 };
 
@@ -65,8 +74,8 @@ class App extends Component {
 
   render() {
     return (
-      <Container textAlign="center" className="content">
-        <p>This week's Torah portion is...</p>
+      <Container className="content">
+        <p>This week's Torah portion is</p>
         <TorahPortion title={this.state.englishTitle} />
         <ReadButtons
           parsha={this.state.englishTitle}
