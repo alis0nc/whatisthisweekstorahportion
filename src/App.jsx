@@ -42,6 +42,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      lang: "en",
       englishTitle: null,
       hebrewTitle: null,
       sefer: null,
@@ -72,20 +73,63 @@ class App extends Component {
       });
   }
 
+  switchLanguage(event) {
+    event.preventDefault();
+    this.setState((prevState, props) => {
+      return { lang: prevState.lang === "en" ? "he" : "en" };
+    });
+  }
+
   render() {
+    const {
+      lang,
+      englishTitle,
+      hebrewTitle,
+      sefer,
+      startChapter,
+      startVerse,
+      endChapter,
+      endVerse
+    } = this.state;
+
+    const ribbonStyle = {
+      position: "absolute",
+      top: 0,
+      right: 0,
+      border: 0
+    };
+
+    const rtl = {
+      direction: "rtl"
+    };
+
+    const ltr = {
+      direction: "ltr"
+    };
+
     return (
-      <Container className="content">
-        <p>This week's Torah portion is</p>
-        <TorahPortion title={this.state.englishTitle} />
+      <Container className="content" style={lang === 'en' ? ltr : rtl}>
+        <p>
+          {lang === "en" ? "This week's Torah portion is" : "פרשת השבוע היא"}
+        </p>
+        <TorahPortion title={lang === "en" ? englishTitle : hebrewTitle} />
         <ReadButtons
-          parsha={this.state.englishTitle}
-          sefer={this.state.sefer}
-          startChapter={this.state.startChapter}
-          startVerse={this.state.startVerse}
-          endChapter={this.state.endChapter}
-          endVerse={this.state.endVerse}
+          lang={lang}
+          parsha={englishTitle}
+          sefer={sefer}
+          startChapter={startChapter}
+          startVerse={startVerse}
+          endChapter={endChapter}
+          endVerse={endVerse}
         />
-        <Footer />
+        <Footer lang={lang} switchLanguage={(event) => this.switchLanguage(event)} />
+        <a href="https://github.com/alis0nc/whatisthisweekstorahportion">
+          <img
+            style={ribbonStyle}
+            src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
+            alt="Fork me on GitHub"
+          />
+        </a>
       </Container>
     );
   }

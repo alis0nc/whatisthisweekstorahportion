@@ -96,6 +96,7 @@ const generateORTURL = (sefer, sc, sv, parsha) => {
 class ReadButtons extends Component {
   render() {
     const {
+      lang,
       parsha,
       sefer,
       startChapter,
@@ -115,19 +116,19 @@ class ReadButtons extends Component {
             endVerse
           )}
           target="_blank"
-          content="Read on Sefaria"
+          content={lang === "en" ? "Read on Sefaria" : "לקרוא בספריא"}
         />
         <Button
           as="a"
           href={generateMMURL(sefer, startChapter)}
           target="_blank"
-          content="Read on Mechon-Mamre"
+          content={lang === "en" ? "Read on Mechon-Mamre" : "לקרוא במכון–ממרא"}
         />
         <Button
           as="a"
           href={generateORTURL(sefer, startChapter, startVerse, parsha)}
           target="_blank"
-          content="Read on ORT"
+          content={lang === "en" ? "Read on ORT" : "לקרוא באר“ט"}
         />
       </Button.Group>
     );
